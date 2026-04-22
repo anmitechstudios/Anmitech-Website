@@ -1,15 +1,25 @@
+import { ImageSlot } from "./ImageSlot";
+
 export const About = () => {
   return (
     <section id="about" className="relative py-24 md:py-32 bg-surface/70">
       <div className="container-px mx-auto max-w-7xl">
         <div className="grid md:grid-cols-12 gap-12">
-          <div className="md:col-span-5">
-            <span className="text-[11.5px] uppercase tracking-[0.22em] text-muted-foreground">
-              ⟶ Studio
-            </span>
-            <h2 className="text-display text-4xl md:text-5xl font-semibold text-ink mt-4 leading-[1.05]">
-              A small studio with a long memory of what good looks like.
-            </h2>
+          <div className="md:col-span-5 space-y-10">
+            <div>
+              <span className="text-[11.5px] uppercase tracking-[0.22em] text-muted-foreground">
+                ⟶ Studio
+              </span>
+              <h2 className="text-display text-4xl md:text-5xl font-semibold text-ink mt-4 leading-[1.05]">
+                A small studio with a long memory of what good looks like.
+              </h2>
+            </div>
+            <ImageSlot
+              label="Studio / team photo"
+              hint="Portrait · 4:5"
+              aspect="aspect-[4/5]"
+              tone="ink"
+            />
           </div>
 
           <div className="md:col-span-6 md:col-start-7 space-y-8">

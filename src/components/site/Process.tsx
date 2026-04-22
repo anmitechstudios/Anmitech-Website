@@ -1,3 +1,5 @@
+import { motion, fadeUp, stagger, Reveal } from "./motion";
+
 const steps = [
   {
     n: "01",
@@ -40,10 +42,13 @@ export const Process = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Reveal variants={stagger} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((s) => (
-            <div
+            <motion.div
               key={s.n}
+              variants={fadeUp}
+              whileHover={{ y: -4 }}
+              transition={{ type: "spring", stiffness: 280, damping: 22 }}
               className="group relative p-7 rounded-2xl border border-border bg-background hover:bg-ink hover:text-ink-foreground transition-all duration-500"
             >
               <div className="flex items-start justify-between mb-12">
@@ -58,9 +63,9 @@ export const Process = () => {
               <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-ink-foreground/70">
                 {s.desc}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

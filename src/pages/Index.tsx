@@ -1,16 +1,40 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Header } from "@/components/site/Header";
+import { Hero } from "@/components/site/Hero";
+import { Marquee } from "@/components/site/Marquee";
+import { Services } from "@/components/site/Services";
+import { Work } from "@/components/site/Work";
+import { Process } from "@/components/site/Process";
+import { About } from "@/components/site/About";
+import { CTA } from "@/components/site/CTA";
+import { Footer } from "@/components/site/Footer";
+import { useEffect } from "react";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useEffect(() => {
+    document.title = "Anmitech Studios — Shaping your digital future";
+    const meta =
+      document.querySelector('meta[name="description"]') ||
+      Object.assign(document.createElement("meta"), { name: "description" });
+    meta.setAttribute(
+      "content",
+      "Anmitech Studios is a digital product studio crafting bold brands, considered interfaces, and software that moves businesses forward.",
+    );
+    if (!meta.parentNode) document.head.appendChild(meta);
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <main className="bg-background text-foreground">
+      <Header />
+      <Hero />
+      <Marquee />
+      <Services />
+      <Work />
+      <Process />
+      <About />
+      <CTA />
+      <Footer />
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;

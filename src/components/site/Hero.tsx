@@ -1,4 +1,5 @@
 import { ArrowUpRight, ArrowDown } from "lucide-react";
+import { ImageSlot } from "./ImageSlot";
 
 export const Hero = () => {
   return (
@@ -74,6 +75,34 @@ export const Hero = () => {
               See our work
               <ArrowDown className="h-4 w-4 transition-transform duration-500 group-hover:translate-y-0.5" />
             </a>
+          </div>
+        </div>
+
+        {/* Hero visual — drop in a logo / product mockup */}
+        <div
+          className="mt-16 md:mt-24 grid md:grid-cols-12 gap-4 md:gap-6 reveal"
+          style={{ animationDelay: "0.5s" }}
+        >
+          <ImageSlot
+            label="Hero brand mockup"
+            hint="Logo / product shot · 16:9"
+            aspect="aspect-[16/9]"
+            tone="ink"
+            className="md:col-span-8"
+          />
+          <div className="md:col-span-4 grid grid-cols-2 md:grid-cols-1 gap-4 md:gap-6">
+            <ImageSlot
+              label="Logo mark"
+              hint="Square · 1:1"
+              aspect="aspect-square"
+              tone="primary"
+            />
+            <ImageSlot
+              label="Brand detail"
+              hint="Square · 1:1"
+              aspect="aspect-square"
+              tone="yellow"
+            />
           </div>
         </div>
 

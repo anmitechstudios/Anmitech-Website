@@ -1,4 +1,5 @@
 import { Sparkles, Layers, Code2, Smartphone, Boxes, LineChart } from "lucide-react";
+import { motion, fadeUp, stagger, Reveal } from "./motion";
 
 const services = [
   {
@@ -43,29 +44,32 @@ export const Services = () => {
   return (
     <section id="services" className="relative py-24 md:py-32">
       <div className="container-px mx-auto max-w-7xl">
-        <div className="grid md:grid-cols-12 gap-10 mb-16 md:mb-20">
-          <div className="md:col-span-5">
+        <Reveal variants={stagger} className="grid md:grid-cols-12 gap-10 mb-16 md:mb-20">
+          <motion.div variants={fadeUp} className="md:col-span-5">
             <span className="text-[11.5px] uppercase tracking-[0.22em] text-muted-foreground">
               ⟶ Services
             </span>
             <h2 className="text-display text-4xl md:text-6xl font-semibold text-ink mt-4">
               Capabilities, considered.
             </h2>
-          </div>
-          <div className="md:col-span-6 md:col-start-7 flex items-end">
+          </motion.div>
+          <motion.div variants={fadeUp} className="md:col-span-6 md:col-start-7 flex items-end">
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               We pair sharp strategy with elegant craft. Each engagement is shaped
               around a single outcome — momentum for your business.
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border">
+        <Reveal variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border">
           {services.map((s) => {
             const Icon = s.icon;
             return (
-              <div
+              <motion.div
                 key={s.title}
+                variants={fadeUp}
+                whileHover={{ y: -4 }}
+                transition={{ type: "spring", stiffness: 300, damping: 24 }}
                 className="group relative bg-background p-8 md:p-10 transition-colors duration-500 hover:bg-surface"
               >
                 <div className="flex items-center justify-between mb-12">
@@ -84,10 +88,10 @@ export const Services = () => {
                 <p className="text-sm md:text-[15px] text-muted-foreground leading-relaxed">
                   {s.desc}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

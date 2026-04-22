@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { motion, fadeUp, stagger, Reveal } from "./motion";
 
 const projects = [
   {
@@ -53,13 +54,15 @@ export const Work = () => {
           </a>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-          {projects.map((p, i) => (
-            <a
+        <Reveal variants={stagger} className="grid md:grid-cols-2 gap-6 md:gap-8">
+          {projects.map((p) => (
+            <motion.a
               key={p.name}
               href="#contact"
+              variants={fadeUp}
+              whileHover={{ y: -6 }}
+              transition={{ type: "spring", stiffness: 260, damping: 22 }}
               className="group relative overflow-hidden rounded-3xl border border-border bg-background hover:shadow-elegant transition-all duration-700"
-              style={{ animationDelay: `${i * 0.05}s` }}
             >
               <div
                 className={`relative aspect-[5/4] md:aspect-[16/11] bg-gradient-to-br ${p.accent} overflow-hidden`}
@@ -99,9 +102,9 @@ export const Work = () => {
                   <ArrowUpRight className="h-4 w-4" />
                 </span>
               </div>
-            </a>
+            </motion.a>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

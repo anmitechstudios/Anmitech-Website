@@ -32,16 +32,18 @@ export const CTA = () => {
             </div>
 
             <div className="md:col-span-4 flex md:justify-end">
-              <a
+              <motion.a
                 href="mailto:hello@anmitech.studio"
-                className="group inline-flex items-center gap-2 px-6 py-4 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary-glow transition-all duration-500 shadow-glow"
+                whileHover={{ y: -2, scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
+                className="group inline-flex items-center gap-2 px-6 py-4 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary-glow transition-colors duration-500 shadow-glow"
               >
                 hello@anmitech.studio
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
+              </motion.a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

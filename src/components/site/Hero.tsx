@@ -1,5 +1,6 @@
 import { ArrowUpRight, ArrowDown } from "lucide-react";
 import { ImageSlot } from "./ImageSlot";
+import { motion } from "./motion";
 
 export const Hero = () => {
   return (
@@ -61,20 +62,24 @@ export const Hero = () => {
             className="md:col-span-6 flex flex-wrap items-center gap-4 md:justify-end reveal"
             style={{ animationDelay: "0.4s" }}
           >
-            <a
+            <motion.a
               href="#contact"
-              className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-ink text-ink-foreground text-sm font-medium hover:bg-primary transition-all duration-500 shadow-soft"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-ink text-ink-foreground text-sm font-medium hover:bg-primary transition-colors duration-500 shadow-soft"
             >
               Start a project
               <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="#work"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.97 }}
               className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-border bg-background text-ink text-sm font-medium hover:border-ink transition-colors duration-500"
             >
               See our work
               <ArrowDown className="h-4 w-4 transition-transform duration-500 group-hover:translate-y-0.5" />
-            </a>
+            </motion.a>
           </div>
         </div>
 
@@ -116,15 +121,22 @@ export const Hero = () => {
             { k: "08 yrs", v: "Crafting digital" },
             { k: "30+", v: "Global partners" },
             { k: "99%", v: "Client retention" },
-          ].map((s) => (
-            <div key={s.v} className="flex flex-col gap-1">
+          ].map((s, i) => (
+            <motion.div
+              key={s.v}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              className="flex flex-col gap-1"
+            >
               <span className="text-display text-3xl md:text-4xl font-semibold text-ink">
                 {s.k}
               </span>
               <span className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
                 {s.v}
               </span>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

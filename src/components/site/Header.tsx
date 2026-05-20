@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const links = [
   { label: "Work", href: "#work" },
@@ -12,6 +13,7 @@ const links = [
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -44,6 +46,13 @@ export const Header = () => {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="inline-flex items-center justify-center h-9 w-9 rounded-full border border-border bg-background hover:bg-muted text-ink transition-colors duration-300"
+          >
+            {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+          </button>
           <a
             href="#contact"
             className="group inline-flex items-center gap-1.5 text-[13.5px] font-medium px-4 py-2.5 rounded-full bg-ink text-ink-foreground hover:bg-primary transition-all duration-500"
@@ -53,13 +62,22 @@ export const Header = () => {
           </a>
         </div>
 
-        <button
-          onClick={() => setOpen((s) => !s)}
-          className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-full border border-border bg-background"
-          aria-label="Menu"
-        >
-          {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="inline-flex items-center justify-center h-10 w-10 rounded-full border border-border bg-background text-ink"
+          >
+            {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+          </button>
+          <button
+            onClick={() => setOpen((s) => !s)}
+            className="inline-flex items-center justify-center h-10 w-10 rounded-full border border-border bg-background"
+            aria-label="Menu"
+          >
+            {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+          </button>
+        </div>
       </div>
 
       {open && (

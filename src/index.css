@@ -1,4 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Stack Sans Text';
+  src: url('./fonts/stack_sans/fonts/Text/webfonts/StackSansText[wght].woff2') format('woff2');
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Stack Sans Headline';
+  src: url('./fonts/stack_sans/fonts/Headline/webfonts/StackSansHeadline[wght].woff2') format('woff2');
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Stack Sans Notch';
+  src: url('./fonts/stack_sans/fonts/Notch/webfonts/StackSansNotch[wght].woff2') format('woff2');
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -86,21 +108,53 @@
   .dark {
     --background: 30 7% 7%;
     --foreground: 0 0% 95%;
+
+    --surface: 30 5% 12%;
+    --surface-foreground: 0 0% 92%;
+
     --card: 30 7% 9%;
     --card-foreground: 0 0% 95%;
+
     --popover: 30 7% 9%;
     --popover-foreground: 0 0% 95%;
+
     --primary: 19 88% 55%;
     --primary-foreground: 0 0% 100%;
+    --primary-glow: 19 95% 65%;
+
+    --ink: 0 0% 92%;
+    --ink-foreground: 30 7% 9%;
+
     --secondary: 30 5% 14%;
     --secondary-foreground: 0 0% 95%;
+
     --muted: 30 5% 14%;
     --muted-foreground: 30 5% 65%;
+
     --accent: 19 88% 55%;
     --accent-foreground: 0 0% 100%;
+
+    --yellow: 53 84% 61%;
+    --yellow-foreground: 30 7% 9%;
+    --blue: 202 89% 52%;
+    --blue-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
     --border: 30 5% 18%;
     --input: 30 5% 18%;
     --ring: 19 88% 55%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(19 88% 55%), hsl(19 95% 65%));
+    --gradient-spectrum: linear-gradient(120deg, hsl(19 88% 55%) 0%, hsl(53 84% 61%) 50%, hsl(202 89% 52%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(30 7% 7%) 0%, hsl(30 7% 10%) 100%);
+    --gradient-ink: linear-gradient(135deg, hsl(0 0% 92%), hsl(0 0% 80%));
+    --gradient-radial-glow: radial-gradient(60% 60% at 50% 0%, hsl(19 88% 55% / 0.22) 0%, transparent 70%);
+
+    --shadow-soft: 0 1px 2px hsl(0 0% 0% / 0.2), 0 8px 24px hsl(0 0% 0% / 0.3);
+    --shadow-elegant: 0 10px 40px -10px hsl(19 88% 55% / 0.35);
+    --shadow-glow: 0 0 60px hsl(19 95% 65% / 0.4);
   }
 }
 

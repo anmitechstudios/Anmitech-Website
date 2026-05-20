@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['Space Grotesk', 'Inter', 'sans-serif'],
+        sans: ['Stack Sans Text', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Stack Sans Headline', 'Stack Sans Text', 'sans-serif'],
+        notch: ['Stack Sans Notch', 'Stack Sans Text', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

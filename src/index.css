@@ -106,13 +106,13 @@
   }
 
   .dark {
-    --background: 30 7% 7%;
+    --background: 30 9% 5%;
     --foreground: 0 0% 95%;
 
-    --surface: 30 5% 12%;
+    --surface: 30 5% 9%;
     --surface-foreground: 0 0% 92%;
 
-    --card: 30 7% 9%;
+    --card: 30 7% 7%;
     --card-foreground: 0 0% 95%;
 
     --popover: 30 7% 9%;
@@ -148,7 +148,7 @@
 
     --gradient-primary: linear-gradient(135deg, hsl(19 88% 55%), hsl(19 95% 65%));
     --gradient-spectrum: linear-gradient(120deg, hsl(19 88% 55%) 0%, hsl(53 84% 61%) 50%, hsl(202 89% 52%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(30 7% 7%) 0%, hsl(30 7% 10%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(30 9% 5%) 0%, hsl(30 7% 8%) 100%);
     --gradient-ink: linear-gradient(135deg, hsl(0 0% 92%), hsl(0 0% 80%));
     --gradient-radial-glow: radial-gradient(60% 60% at 50% 0%, hsl(19 88% 55% / 0.22) 0%, transparent 70%);
 
@@ -186,9 +186,17 @@
   }
 
   .text-display {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
-    letter-spacing: -0.035em;
+    font-family: 'Stack Sans Headline', 'Stack Sans Text', sans-serif;
+    letter-spacing: -0.04em;
     line-height: 0.95;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border text-[11px] uppercase tracking-[0.2em] text-muted-foreground font-medium;
+  }
+
+  .section-label {
+    @apply text-[11px] uppercase tracking-[0.22em] text-muted-foreground font-medium;
   }
 
   .grain {
@@ -229,4 +237,27 @@
   0% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.4); }
   70% { box-shadow: 0 0 0 18px hsl(var(--primary) / 0); }
   100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0); }
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes marquee-reverse {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes scroll-up {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+
+@keyframes scroll-down {
+  from { transform: translateY(-50%); }
+  to   { transform: translateY(0); }
+}
+
+.scroll-pause:hover {
+  animation-play-state: paused;
 }

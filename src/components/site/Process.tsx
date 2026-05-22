@@ -25,14 +25,13 @@ const steps = [
 
 export const Process = () => {
   return (
-    <section id="process" className="relative py-24 md:py-32">
+    <section id="process" className="py-[120px]">
       <div className="container-px mx-auto max-w-7xl">
+        {/* Header */}
         <div className="grid md:grid-cols-12 gap-10 mb-14 md:mb-20">
           <div className="md:col-span-5">
-            <span className="text-[11.5px] uppercase tracking-[0.22em] text-muted-foreground">
-              ⟶ Process
-            </span>
-            <h2 className="text-display text-4xl md:text-6xl font-semibold text-ink mt-4">
+            <span className="badge">Process</span>
+            <h2 className="text-display text-4xl md:text-6xl font-semibold text-ink mt-5">
               Four moves, one outcome.
             </h2>
           </div>
@@ -42,27 +41,29 @@ export const Process = () => {
           </p>
         </div>
 
-        <Reveal variants={stagger} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Steps */}
+        <Reveal variants={stagger} className="grid md:grid-cols-4 gap-4 md:gap-5 mt-14 md:mt-20">
           {steps.map((s) => (
             <motion.div
               key={s.n}
               variants={fadeUp}
-              whileHover={{ y: -4 }}
-              transition={{ type: "spring", stiffness: 280, damping: 22 }}
-              className="group relative p-7 rounded-2xl border border-border bg-background hover:bg-ink hover:text-ink-foreground transition-all duration-500"
+              className="relative p-7 md:p-8 rounded-2xl border border-border bg-background group overflow-hidden hover:border-primary/40 hover:bg-surface/50 transition-all duration-500"
             >
-              <div className="flex items-start justify-between mb-12">
-                <span className="text-[11px] tabular-nums tracking-[0.18em] text-muted-foreground group-hover:text-ink-foreground/60">
-                  {s.n}
-                </span>
-                <span className="h-2 w-2 rounded-full bg-primary" />
-              </div>
-              <h3 className="text-display text-2xl font-semibold mb-3">
+              {/* Background step number */}
+              <span className="text-display text-6xl md:text-7xl font-semibold text-ink/10 group-hover:text-primary/20 transition-colors duration-500 leading-none select-none">
+                {s.n}
+              </span>
+
+              {/* Content on top */}
+              <h3 className="text-display text-2xl font-semibold text-ink mt-4 mb-3">
                 {s.title}
               </h3>
-              <p className="text-sm leading-relaxed text-muted-foreground group-hover:text-ink-foreground/70">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {s.desc}
               </p>
+
+              {/* Orange dot */}
+              <div className="h-1.5 w-1.5 rounded-full bg-primary mt-6" />
             </motion.div>
           ))}
         </Reveal>

@@ -13,10 +13,10 @@ const NAV = [
 ];
 
 const SOCIALS = [
-  { label: "X",         href: "#", Icon: FaXTwitter    },
-  { label: "Instagram", href: "#", Icon: FaInstagram   },
-  { label: "Dribbble",  href: "#", Icon: FaDribbble    },
-  { label: "LinkedIn",  href: "#", Icon: FaLinkedinIn  },
+  { label: "X",         href: "https://x.com",            Icon: FaXTwitter    },
+  { label: "Instagram", href: "https://instagram.com",     Icon: FaInstagram   },
+  { label: "Dribbble",  href: "https://dribbble.com",      Icon: FaDribbble    },
+  { label: "LinkedIn",  href: "https://linkedin.com",      Icon: FaLinkedinIn  },
 ];
 
 function useLiveTime() {
@@ -185,6 +185,8 @@ export const Footer = () => {
                 key={label}
                 href={href}
                 aria-label={label}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white/30 hover:text-white/80 transition-colors duration-300"
               >
                 <Icon className="h-[18px] w-[18px]" />

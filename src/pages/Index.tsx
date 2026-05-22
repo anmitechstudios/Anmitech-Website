@@ -27,17 +27,6 @@ const Index = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    document.title = "Anmitech Studios — Shaping your digital future";
-    const meta =
-      document.querySelector('meta[name="description"]') ||
-      Object.assign(document.createElement("meta"), { name: "description" });
-    meta.setAttribute(
-      "content",
-      "Anmitech Studios is a digital product studio crafting bold brands, considered interfaces, and software that moves businesses forward.",
-    );
-    if (!meta.parentNode) document.head.appendChild(meta);
-  }, []);
 
   return (
     <>

@@ -5,7 +5,7 @@ const services = [
   {
     title: "Product Strategy",
     desc: "Define the right product before building the wrong one.",
-    features: ["Product Discovery", "User Research", "Market Validation", "Product Roadmapping", "Feature Prioritization"],
+    features: ["Discovery", "User Research", "Market Validation", "Roadmapping", "Prioritization", "Competitive Analysis", "Go-to-Market"],
     accent: "bg-primary/10",
     dot: "bg-primary",
     imgBg: "radial-gradient(ellipse at 20% 80%, hsl(19 88% 52% / 0.65) 0%, transparent 55%), radial-gradient(ellipse at 80% 15%, hsl(53 84% 61% / 0.5) 0%, transparent 50%), linear-gradient(135deg, #131110 0%, hsl(19 88% 52% / 0.25) 100%)",
@@ -21,7 +21,7 @@ const services = [
   {
     title: "MVP Development",
     desc: "Launch faster with a focused first version of your product.",
-    features: ["MVP Planning", "Frontend Development", "Backend Integration", "Responsive Platforms", "Technical Scoping", "Product Launch Support"],
+    features: ["MVP Planning", "Frontend Dev", "Backend Dev", "Responsive", "Tech Scoping", "Launch Support", "API Design"],
     accent: "bg-blue/10",
     dot: "bg-blue",
     imgBg: "radial-gradient(ellipse at 80% 50%, hsl(202 89% 52% / 0.65) 0%, transparent 55%), radial-gradient(ellipse at 10% 20%, hsl(202 89% 52% / 0.35) 0%, transparent 45%), linear-gradient(135deg, #131110 0%, hsl(202 89% 52% / 0.2) 100%)",
@@ -29,7 +29,7 @@ const services = [
   {
     title: "Enterprise Software",
     desc: "Modern software for complex business operations.",
-    features: ["Internal Tools", "Admin Dashboards", "Operational Systems", "Workflow Automation", "Multi-role Systems"],
+    features: ["Internal Tools", "Dashboards", "Ops Systems", "Automation", "Role Management", "Data Viz", "Integrations"],
     accent: "bg-primary/10",
     dot: "bg-primary",
     imgBg: "radial-gradient(ellipse at 50% 0%, hsl(19 88% 52% / 0.7) 0%, transparent 55%), radial-gradient(ellipse at 90% 90%, hsl(53 84% 61% / 0.45) 0%, transparent 45%), linear-gradient(180deg, #131110 0%, hsl(19 88% 52% / 0.2) 100%)",
@@ -37,7 +37,7 @@ const services = [
   {
     title: "AI Product Development",
     desc: "Build AI-powered experiences that create real value.",
-    features: ["AI Feature Strategy", "AI Workflows", "Conversational Interfaces", "Productivity Tools", "Automation Experiences"],
+    features: ["AI Strategy", "AI Workflows", "Chat Interfaces", "Productivity", "Automation", "LLM Integration", "AI Prototyping"],
     accent: "bg-yellow/15",
     dot: "bg-yellow",
     imgBg: "radial-gradient(ellipse at 30% 40%, hsl(53 84% 61% / 0.6) 0%, transparent 55%), radial-gradient(ellipse at 85% 80%, hsl(19 88% 52% / 0.35) 0%, transparent 45%), linear-gradient(135deg, #131110 0%, hsl(53 84% 61% / 0.2) 100%)",

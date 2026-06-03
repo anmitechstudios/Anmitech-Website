@@ -36,8 +36,8 @@ export const Process = () => {
             </h2>
           </div>
           <p className="md:col-span-6 md:col-start-7 self-end text-base md:text-lg text-muted-foreground leading-relaxed">
-            A focused engagement, designed to remove ambiguity and create
-            momentum across every sprint.
+             A 4-step approach designed to remove uncertainty and create momentum
+
           </p>
         </div>
 

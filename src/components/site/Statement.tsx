@@ -12,12 +12,13 @@ export const Statement = () => {
           className="text-display font-semibold text-ink"
           style={{ fontSize: "clamp(2rem, 5.5vw, 5rem)", lineHeight: 1.05 }}
         >
-          We help brands show up with{" "}
-          <span className="text-muted-foreground">clarity,</span>{" "}
-          <span className="text-muted-foreground">confidence,</span>{" "}
-          and design that{" "}
-          <span className="relative inline-block">
-            actually works
+          Whether you're validating a new concept, building an{" "}
+          <span className="text-muted-foreground">MVP,</span>{" "}
+          {/* <span className="text-muted-foreground">confidence,</span>{" "} */}
+          or scaling an existing platform,{" "}
+          we help you move faster with{" "}
+          <span className="relative inline-block text-muted-foreground">
+            confidence
             <svg
               viewBox="0 0 300 14"
               className="absolute left-0 -bottom-1 md:-bottom-2 w-full h-2 md:h-3 text-primary"
@@ -25,7 +26,7 @@ export const Statement = () => {
               preserveAspectRatio="none"
             >
               <path
-                d="M2 11 C 80 2, 200 2, 298 10"
+                d="M2 11 C 80 7, 220 7, 298 11"
                 stroke="currentColor"
                 strokeWidth="3"
                 strokeLinecap="round"
@@ -35,6 +36,7 @@ export const Statement = () => {
           .
         </motion.h2>
 
+
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,14 +45,13 @@ export const Statement = () => {
           className="mt-12 md:mt-16 flex flex-col md:flex-row md:items-end md:justify-between gap-8"
         >
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-lg">
-            From early-stage startups to growing businesses — we bring the same
-            level of craft and strategic thinking to every engagement.
+            Building a digital product is hard. Between unclear requirements, changing priorities, and technical complexity, teams often struggle to move from concept to execution.
           </p>
           <a
             href="#services"
             className="group inline-flex items-center gap-2 text-sm font-medium text-ink shrink-0"
           >
-            <span className="link-underline">Explore our services</span>
+            <span className="link-underline">More About Us</span>
             <svg
               className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               viewBox="0 0 16 16"

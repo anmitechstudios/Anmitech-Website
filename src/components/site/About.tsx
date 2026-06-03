@@ -1,4 +1,4 @@
-import { ImageSlot } from "./ImageSlot";
+import fullLogoWhite from "@/images/full logo white.svg";
 import { motion, fadeUp, stagger, Reveal } from "./motion";
 
 const principles = [
@@ -18,16 +18,13 @@ export const About = () => {
             <motion.div variants={fadeUp}>
               <span className="badge">Studio</span>
               <h2 className="text-display text-4xl md:text-5xl font-semibold text-ink mt-5 leading-[1.05]">
-                A small studio with a long memory of what good looks like.
+                 A product studio built for ambitious ideas.
               </h2>
             </motion.div>
             <motion.div variants={fadeUp}>
-              <ImageSlot
-                label="Studio / team photo"
-                hint="Portrait · 4:5"
-                aspect="aspect-[4/5]"
-                tone="ink"
-              />
+              <div className="aspect-[4/5] w-full rounded-2xl bg-[#0e0d0c] flex items-center justify-center overflow-hidden border border-border">
+                <img src={fullLogoWhite} alt="Anmitech Studios" className="w-2/3" />
+              </div>
             </motion.div>
           </Reveal>
 

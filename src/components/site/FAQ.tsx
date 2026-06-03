@@ -5,36 +5,28 @@ import { motion, fadeUp, stagger, Reveal } from "./motion";
 
 const faqs = [
   {
-    q: "How fast will I receive the work?",
-    a: "Most design deliverables land within 3–5 business days. For larger scopes like full brand systems or web builds, we'll agree a clear timeline before we start — and we stick to it.",
+    q: "How quickly can we start?",
+    a: "Most projects begin within one to two weeks after discovery and planning.",
   },
   {
-    q: "How does onboarding work?",
-    a: "After an initial call we send a short brief document. Once that's signed off, we kick off within 48 hours. No lengthy discovery phases — we get to work fast.",
+    q: "What types of companies do you work with?",
+    a: "We primarily work with startups, SaaS companies, AI businesses, and organizations building digital products.",
   },
   {
-    q: "Who works on my project?",
-    a: "A senior partner leads every engagement from first call to final delivery. Your project is never handed to a junior or outsourced — you always know who you're working with.",
+    q: "Can you help validate an idea before development?",
+    a: "Yes. Product discovery and validation are often the first step in our process.",
   },
   {
-    q: "Is there a limit to how many revisions I can request?",
-    a: "We work in collaborative feedback loops, not round-based revision counts. We iterate until it's right — most projects land in two to three rounds naturally.",
+    q: "Do you offer development as well as design?",
+    a: "Absolutely. We provide end-to-end product support from strategy and design through development and launch.",
   },
   {
-    q: "What if I need to pause or stop the engagement?",
-    a: "We work on project-based agreements. If circumstances change, we'll wrap up the current sprint cleanly and hand over all work in progress with full source files.",
+    q: "Can you build AI-powered products?",
+    a: "Yes. We help teams identify opportunities for AI integration and design experiences that create real business value.",
   },
   {
-    q: "Can you handle full websites or complex apps?",
-    a: "Yes — web builds and product design are core capabilities. We scope these as structured projects with defined milestones and clear deliverables at each stage.",
-  },
-  {
-    q: "What tools do you use?",
-    a: "Figma for design, React and modern web stacks for engineering, Framer for marketing sites where appropriate. We share all source files and hand off in formats your team can use.",
-  },
-  {
-    q: "How do I get started?",
-    a: "Hit the 'Start a project' button, or email hello@anmitech.studio. We'll schedule a call, understand your goals, and come back with a clear proposal within 48 hours.",
+    q: "Do you work with international clients?",
+    a: "Yes. We collaborate with clients globally and operate remotely when needed.",
   },
 ];
 
@@ -91,10 +83,10 @@ export const FAQ = () => {
             <p className="mt-5 text-sm text-muted-foreground leading-relaxed">
               Still have something on your mind? Email us at{" "}
               <a
-                href="mailto:hello@anmitech.studio"
+                href="mailto:info@anmitechstudios.com"
                 className="text-ink hover:text-primary transition-colors duration-300 link-underline"
               >
-                hello@anmitech.studio
+                info@anmitechstudios.com
               </a>
             </p>
           </Reveal>

@@ -3,52 +3,44 @@ import { motion, fadeUp, stagger, Reveal } from "./motion";
 
 const services = [
   {
-    title: "Brand & Identity",
-    desc: "We help founders shape how their brand looks, sounds, and feels — then build a system that scales with them.",
-    features: ["Logo Design", "Colour Palette", "Brand Guidelines", "Business Collateral", "Brand Voice", "Social Templates", "Mockups"],
+    title: "Product Strategy",
+    desc: "Define the right product before building the wrong one.",
+    features: ["Product Discovery", "User Research", "Market Validation", "Product Roadmapping", "Feature Prioritization"],
     accent: "bg-primary/10",
     dot: "bg-primary",
     imgBg: "radial-gradient(ellipse at 20% 80%, hsl(19 88% 52% / 0.65) 0%, transparent 55%), radial-gradient(ellipse at 80% 15%, hsl(53 84% 61% / 0.5) 0%, transparent 50%), linear-gradient(135deg, #131110 0%, hsl(19 88% 52% / 0.25) 100%)",
   },
   {
     title: "Product Design",
-    desc: "We create intuitive, scalable interfaces that not only look good — they guide users to the right outcomes.",
-    features: ["UX Research", "Wireframing", "UI Design", "Prototyping", "Design Systems", "Accessibility", "Handoff"],
+    desc: "Design experiences people understand and enjoy using.",
+    features: ["UX Research", "User Flows", "Information Architecture", "Wireframing", "UI Design", "Design Systems", "Prototyping"],
     accent: "bg-yellow/15",
     dot: "bg-yellow",
     imgBg: "radial-gradient(ellipse at 70% 30%, hsl(53 84% 61% / 0.65) 0%, transparent 55%), radial-gradient(ellipse at 15% 80%, hsl(19 88% 52% / 0.4) 0%, transparent 50%), linear-gradient(135deg, #131110 0%, hsl(53 84% 61% / 0.2) 100%)",
   },
   {
-    title: "Web & Engineering",
-    desc: "We build performant, accessible web platforms and native-feeling apps on modern stacks.",
-    features: ["Web Development", "Mobile Apps", "AI Integration", "API Design", "Performance", "CMS Setup", "Deployment"],
+    title: "MVP Development",
+    desc: "Launch faster with a focused first version of your product.",
+    features: ["MVP Planning", "Frontend Development", "Backend Integration", "Responsive Platforms", "Technical Scoping", "Product Launch Support"],
     accent: "bg-blue/10",
     dot: "bg-blue",
     imgBg: "radial-gradient(ellipse at 80% 50%, hsl(202 89% 52% / 0.65) 0%, transparent 55%), radial-gradient(ellipse at 10% 20%, hsl(202 89% 52% / 0.35) 0%, transparent 45%), linear-gradient(135deg, #131110 0%, hsl(202 89% 52% / 0.2) 100%)",
   },
   {
-    title: "Motion & Interaction",
-    desc: "We bring interfaces and brands to life through animation — from subtle micro-interactions to full cinematic sequences.",
-    features: ["Micro-animations", "Page Transitions", "Scroll Effects", "Lottie / GSAP", "Brand Motion", "Video Intros", "Interactive UI"],
+    title: "Enterprise Software",
+    desc: "Modern software for complex business operations.",
+    features: ["Internal Tools", "Admin Dashboards", "Operational Systems", "Workflow Automation", "Multi-role Systems"],
     accent: "bg-primary/10",
     dot: "bg-primary",
     imgBg: "radial-gradient(ellipse at 50% 0%, hsl(19 88% 52% / 0.7) 0%, transparent 55%), radial-gradient(ellipse at 90% 90%, hsl(53 84% 61% / 0.45) 0%, transparent 45%), linear-gradient(180deg, #131110 0%, hsl(19 88% 52% / 0.2) 100%)",
   },
   {
-    title: "Content & Copy",
-    desc: "Words that pull their weight. We write clear, intentional copy for every touchpoint — from hero headlines to onboarding flows.",
-    features: ["Web Copy", "UX Writing", "Brand Messaging", "Landing Pages", "Email Flows", "Case Studies", "Blog Content"],
+    title: "AI Product Development",
+    desc: "Build AI-powered experiences that create real value.",
+    features: ["AI Feature Strategy", "AI Workflows", "Conversational Interfaces", "Productivity Tools", "Automation Experiences"],
     accent: "bg-yellow/15",
     dot: "bg-yellow",
     imgBg: "radial-gradient(ellipse at 30% 40%, hsl(53 84% 61% / 0.6) 0%, transparent 55%), radial-gradient(ellipse at 85% 80%, hsl(19 88% 52% / 0.35) 0%, transparent 45%), linear-gradient(135deg, #131110 0%, hsl(53 84% 61% / 0.2) 100%)",
-  },
-  {
-    title: "Growth & Analytics",
-    desc: "We build the data layer and growth loops that help you acquire, retain, and truly understand your users.",
-    features: ["SEO Strategy", "Analytics Setup", "A/B Testing", "CRO", "Funnel Design", "Dashboards", "Reporting"],
-    accent: "bg-blue/10",
-    dot: "bg-blue",
-    imgBg: "radial-gradient(ellipse at 60% 20%, hsl(202 89% 52% / 0.6) 0%, transparent 55%), radial-gradient(ellipse at 10% 85%, hsl(202 89% 52% / 0.4) 0%, transparent 45%), linear-gradient(135deg, #131110 0%, hsl(202 89% 52% / 0.2) 100%)",
   },
 ];
 
@@ -64,15 +56,14 @@ export const Services = () => {
           <motion.div variants={fadeUp} className="md:col-span-5">
             <span className="badge">Services</span>
             <h2 className="text-display text-4xl md:text-6xl font-semibold text-ink mt-5">
-              Capabilities,{" "}
+              How can we{" "}
               <br />
-              considered.
+              help?
             </h2>
           </motion.div>
           <motion.div variants={fadeUp} className="md:col-span-6 md:col-start-7 flex items-end">
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              We pair sharp strategy with elegant craft. Each engagement is
-              shaped around a single outcome — momentum for your business.
+              We work with founders, startups, and businesses to define, design, build, and launch digital products that create value for users and drive business growth. 
             </p>
           </motion.div>
         </Reveal>

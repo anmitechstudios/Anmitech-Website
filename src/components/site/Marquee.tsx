@@ -1,13 +1,13 @@
 const items = [
-  "Brand Systems",
+  "Product Strategy",
   "Product Design",
-  "Web Engineering",
-  "Mobile Apps",
-  "AI Integration",
-  "Design Ops",
-  "Motion & 3D",
-  "Strategy",
+  "MVP Development",
+  "Web Applications",
+  "Enterprise Software",
+  "AI Products",
 ];
+
+
 
 export const Marquee = () => {
   const loop = [...items, ...items];

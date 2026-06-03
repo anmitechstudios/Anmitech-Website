@@ -2,9 +2,9 @@ import { ArrowUpRight, Star } from "lucide-react";
 import { Reveal, motion, fadeUp, stagger } from "./motion";
 
 const stats = [
-  { k: "120+", v: "Products shipped", cardHover: "hover:bg-blue/10", numHover: "group-hover:text-blue" },
-  { k: "08 yrs", v: "Crafting digital", cardHover: "hover:bg-yellow/10", numHover: "group-hover:text-yellow" },
-  { k: "30+", v: "Global partners", cardHover: "hover:bg-primary/10", numHover: "group-hover:text-primary" },
+  { k: "20+", v: "Products Designed & Built", cardHover: "hover:bg-blue/10", numHover: "group-hover:text-blue" },
+  { k: "05 yrs", v: "Building Digital Products", cardHover: "hover:bg-yellow/10", numHover: "group-hover:text-yellow" },
+  { k: "03+", v: "Global Retainers", cardHover: "hover:bg-primary/10", numHover: "group-hover:text-primary" },
   { k: "99%", v: "Client retention", cardHover: "hover:bg-blue/10", numHover: "group-hover:text-blue" },
 ];
 
@@ -42,12 +42,12 @@ export const Hero = () => {
             className="text-display font-semibold text-ink mx-auto"
             style={{ fontSize: "clamp(3rem, 9vw, 8.5rem)", lineHeight: 0.93 }}
           >
-            Shaping your
+            From idea to 
             <br />
             <span className="relative inline-block">
-              digital{" "}
+              {" "}
               <span className="relative">
-                future
+                launch
                 <svg
                   viewBox="0 0 300 18"
                   className="absolute left-0 -bottom-1 md:-bottom-3 w-full h-3 md:h-5 text-primary"
@@ -70,8 +70,8 @@ export const Hero = () => {
         {/* Subtitle */}
         <Reveal variants={fadeUp}>
           <p className="mt-8 md:mt-10 text-base md:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto">
-            Design and engineering for those who move fast and scale faster.
-            We shape bold brands, considered products, and software that works.
+            We partner with startups and growing companies to transform ideas into market-ready products through strategy, design, and engineering.
+
           </p>
         </Reveal>
 
@@ -96,17 +96,17 @@ export const Hero = () => {
               whileTap={{ scale: 0.97 }}
               className="group inline-flex items-center gap-2 px-7 py-4 rounded-full border border-border bg-background text-ink text-[13.5px] font-medium hover:border-ink transition-colors duration-500"
             >
-              See our work
+              View our work
             </motion.a>
           </motion.div>
         </Reveal>
 
         {/* Trust line */}
-        {/* <Reveal variants={fadeUp}>
+        <Reveal variants={fadeUp}>
           <p className="mt-6 text-[12px] uppercase tracking-[0.18em] text-muted-foreground">
-            Trusted by founders and teams around the world
+            Trusted by founders building the future.
           </p>
-        </Reveal> */}
+        </Reveal>
       </div>
 
       {/* Stats strip — full width */}

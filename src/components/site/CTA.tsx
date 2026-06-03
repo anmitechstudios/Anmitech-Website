@@ -33,25 +33,27 @@ export const CTA = () => {
                 Let&apos;s build
               </span>
               <h2 className="text-display text-5xl md:text-7xl lg:text-8xl font-semibold leading-[0.95]">
-                Have a project
+                Got an idea
+
                 <br />
                 in mind?
               </h2>
               <p className="mt-6 max-w-xl text-base md:text-lg text-ink-foreground/70 leading-relaxed">
                 Tell us where you&apos;re heading. We&apos;ll come back within
                 two business days with thoughts, references, and a way forward.
+                Tell us what you&apos;re building, where you&apos;re stuck, or what you&apos;re trying to achieve. We&apos;ll come back with a clear path forward and the next steps
               </p>
             </div>
 
             {/* Right */}
             <div className="md:col-span-4 md:col-start-9 flex flex-col items-start md:items-end gap-4">
               <motion.a
-                href="mailto:hello@anmitech.studio"
+                href="mailto:info@anmitechstudios.com"
                 whileHover={{ y: -2, scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
                 className="group inline-flex items-center gap-2 px-6 py-4 rounded-full bg-primary text-white text-sm font-medium hover:bg-primary-glow transition-colors duration-500 shadow-glow"
               >
-                hello@anmitech.studio
+                info@anmitechstudios.com
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </motion.a>
               <a

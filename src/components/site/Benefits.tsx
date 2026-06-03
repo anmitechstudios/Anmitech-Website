@@ -1,36 +1,36 @@
-import { Clock, Zap, Award, TrendingUp, Fingerprint, LayoutDashboard } from "lucide-react";
+import { Lightbulb, Layers, Award, TrendingUp, Puzzle, Target } from "lucide-react";
 import { motion, fadeUp, stagger, Reveal } from "./motion";
 
 const benefits = [
   {
-    icon: Clock,
-    title: "Fixed project pricing",
-    desc: "Pay a clear, agreed fee — no hourly surprises, no scope creep invoices. Predictable cost from day one.",
+    icon: Lightbulb,
+    title: "Product-First Thinking",
+    desc: "Every project starts by understanding the problem before proposing solutions.",
   },
   {
-    icon: Zap,
-    title: "Fast turnaround",
-    desc: "We move quickly without cutting corners. Most deliverables ship within days, not weeks.",
+    icon: Layers,
+    title: "Strategy + Design + Development",
+    desc: "Everything needed to move from concept to launch under one roof.",
   },
   {
     icon: Award,
-    title: "Senior-led quality",
-    desc: "Every project is directed by a senior partner. Your work never gets handed to a junior and forgotten.",
+    title: "Senior-Led Execution",
+    desc: "Work directly with experienced product builders from start to finish.",
   },
   {
     icon: TrendingUp,
-    title: "Built to scale",
-    desc: "Systems, not one-offs. Everything we build is designed to grow with your team and product.",
+    title: "Built for Scale",
+    desc: "Products designed to grow alongside your business.",
   },
   {
-    icon: Fingerprint,
-    title: "Uniquely yours",
-    desc: "Every project is crafted from scratch to reflect your brand's personality. No recycled templates.",
+    icon: Puzzle,
+    title: "Flexible Engagement",
+    desc: "From discovery workshops to full product partnerships.",
   },
   {
-    icon: LayoutDashboard,
-    title: "Full transparency",
-    desc: "You see the work as it evolves — shared files, open feedback loops, no black-box delivery.",
+    icon: Target,
+    title: "Outcome-Focused",
+    desc: "Success is measured by business impact — not deliverables.",
   },
 ];
 
@@ -47,8 +47,7 @@ export const Benefits = () => {
               What makes the difference.
             </h2>
             <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              Stress-free, senior-quality digital work. Here's what you get
-              when you partner with Anmitech.
+              Building a product requires more than beautiful screens. Here's what you get when you partner with Anmitech
             </p>
           </motion.div>
         </Reveal>

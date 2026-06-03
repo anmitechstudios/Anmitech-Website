@@ -54,9 +54,9 @@ export const Work = () => {
           <div>
             <span className="badge">Selected Work</span>
             <h2 className="text-display text-4xl md:text-6xl font-semibold text-ink mt-5 max-w-2xl">
-              Collaboration that{" "}
+               Products built to solve{" "}
               <br className="hidden md:block" />
-              moved the needle.
+              real business problems.
             </h2>
           </div>
           <a

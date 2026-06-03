@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { FaXTwitter, FaInstagram, FaDribbble, FaLinkedinIn } from "react-icons/fa6";
 import { motion } from "./motion";
 import fullLogoWhite from "@/images/full logo white.svg";
+import iconOrange from "@/images/icon orange.svg";
 
 const NAV = [
   { label: "Services", href: "#services" },
@@ -82,7 +83,7 @@ export const Footer = () => {
                 Get in touch
               </p>
               <motion.a
-                href="mailto:hello@anmitech.studio"
+                href="mailto:info@anmitechstudios.com"
                 whileHover={{ x: 4, transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] } }}
                 className="group inline-flex items-end gap-3 text-white/80 hover:text-white transition-colors duration-300"
               >
@@ -90,7 +91,7 @@ export const Footer = () => {
                   className="font-headline font-semibold leading-none"
                   style={{ fontSize: "clamp(1.4rem, 3.5vw, 2.8rem)", letterSpacing: "-0.03em" }}
                 >
-                  hello@anmitech.studio
+                  info@anmitechstudios.com
                 </span>
                 <ArrowUpRight
                   className="h-6 w-6 md:h-8 md:w-8 shrink-0 mb-0.5 text-primary transition-transform duration-400 group-hover:translate-x-1 group-hover:-translate-y-1"
@@ -105,11 +106,11 @@ export const Footer = () => {
               <span className="text-4xl text-primary/60 font-serif leading-none select-none">"</span>
               <p className="text-[15px] md:text-base text-white/50 leading-relaxed -mt-2">
                 Your next project deserves bold design and engineering that
-                actually moves your business forward.
+                actually moves your business foward.
               </p>
               <div className="mt-6 flex items-center gap-3">
-                <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                  <span className="text-[11px] font-semibold text-primary">A</span>
+                <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0 overflow-hidden">
+                  <img src={iconOrange} alt="Anmitech" className="h-5 w-5 object-contain" />
                 </div>
                 <div>
                   <p className="text-[13px] font-semibold text-white/70 leading-tight">Anmitech Studios</p>

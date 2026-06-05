@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://anmitech.studio/sitemap.xml
+Sitemap: https://anmitechstudios.com/sitemap.xml

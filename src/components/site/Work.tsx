@@ -21,7 +21,7 @@ const projects = [
   {
     name: "Nkwado",
     tag: "E-commerce · Web Design",
-    desc: "Patient-facing mobile app that reduced appointment no-shows by 60% through smart reminders and frictionless rescheduling.",
+    desc: "End-to-end web design for a commerce and delivery platform, focused on creating a secure, user-friendly experience that connects buyers, sellers, and delivery partners.",
     year: "2026",
     accent: "from-green/30 via-green/10 to-transparent",
     chip: "bg-green",

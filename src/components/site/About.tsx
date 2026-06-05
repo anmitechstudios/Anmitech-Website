@@ -1,4 +1,5 @@
 import fullLogoWhite from "@/images/full logo white.svg";
+import fullLogoOrange from "@/images/full logo orange.svg";
 import { motion, fadeUp, stagger, Reveal } from "./motion";
 
 const principles = [
@@ -12,18 +13,18 @@ export const About = () => {
   return (
     <section id="about" className="py-[120px] bg-surface/30">
       <div className="container-px mx-auto max-w-7xl">
-        <div className="grid md:grid-cols-12 gap-12">
+        <div className="grid md:grid-cols-12 gap-12 md:items-stretch">
           {/* Left */}
-          <Reveal variants={stagger} className="md:col-span-5 space-y-10">
+          <Reveal variants={stagger} className="md:col-span-5 flex flex-col gap-10">
             <motion.div variants={fadeUp}>
               <span className="badge">Studio</span>
-              <h2 className="text-display text-4xl md:text-5xl font-semibold text-ink mt-5 leading-[1.05]">
+              <h2 className="text-display text-4xl md:text-5xl font-semibold textS-ink mt-5 leading-[1.05]">
                  A product studio built for ambitious ideas.
               </h2>
             </motion.div>
-            <motion.div variants={fadeUp}>
-              <div className="aspect-[4/5] w-full rounded-2xl bg-[#0e0d0c] flex items-center justify-center overflow-hidden border border-border">
-                <img src={fullLogoWhite} alt="Anmitech Studios" className="w-2/3" />
+            <motion.div variants={fadeUp} className="flex-1 min-h-0">
+              <div className="h-full min-h-[300px] w-full rounded-2xl bg-[#0e0d0c] flex items-center justify-center overflow-hidden border border-border">
+                <img src={fullLogoOrange} alt="Anmitech Studios" className="w-2/3" />
               </div>
             </motion.div>
           </Reveal>

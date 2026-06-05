@@ -9,6 +9,7 @@ import elementWhite from "@/images/element white.svg";
 import elementYellow from "@/images/element yellow.svg";
 import wordmarkWhite from "@/images/wordmark white.svg";
 import wordmarkOrange from "@/images/wordmark orange.svg";
+import maderaImg from "@/images/Madera.jpg";
 
 /* ── individual mockup card ─────────────────────────────────────── */
 interface CardDef {
@@ -17,11 +18,16 @@ interface CardDef {
   alt: string;
   aspect: string;
   imgSize?: string;
+  cover?: boolean;
 }
 
-const MockupCard = ({ bg, asset, alt, aspect, imgSize = "w-1/2" }: CardDef) => (
+const MockupCard = ({ bg, asset, alt, aspect, imgSize = "w-1/2", cover }: CardDef) => (
   <div className={`relative ${bg} ${aspect} rounded-2xl overflow-hidden flex items-center justify-center shrink-0`}>
-    <img src={asset} alt={alt} className={`${imgSize} object-contain`} />
+    {cover ? (
+      <img src={asset} alt={alt} className="absolute inset-0 w-full h-full object-cover" />
+    ) : (
+      <img src={asset} alt={alt} className={`${imgSize} object-contain`} />
+    )}
   </div>
 );
 
@@ -29,6 +35,7 @@ const MockupCard = ({ bg, asset, alt, aspect, imgSize = "w-1/2" }: CardDef) => (
 const col1: CardDef[] = [
   { bg: "bg-ink",        asset: fullLogoWhite,  alt: "Full logo white",   aspect: "aspect-[4/5]" },
   { bg: "bg-primary/10", asset: iconOrange,     alt: "Icon orange",       aspect: "aspect-square" },
+  { bg: "",              asset: maderaImg,      alt: "Madera",            aspect: "aspect-[4/5]",  cover: true },
   { bg: "bg-yellow/20",  asset: elementOrange,  alt: "Element orange",    aspect: "aspect-[4/5]" },
   { bg: "bg-blue/10",    asset: iconBlue,       alt: "Icon blue",         aspect: "aspect-square" },
 ];
@@ -36,6 +43,7 @@ const col1: CardDef[] = [
 const col2: CardDef[] = [
   { bg: "bg-background border border-border", asset: fullLogoOrange, alt: "Full logo orange",  aspect: "aspect-[4/5]" },
   { bg: "bg-ink",                             asset: wordmarkWhite,  alt: "Wordmark white",    aspect: "aspect-[4/3]", imgSize: "w-3/5" },
+  { bg: "",                                   asset: maderaImg,      alt: "Madera",            aspect: "aspect-[4/5]", cover: true },
   { bg: "bg-primary/10",                      asset: iconOrange,     alt: "Icon orange",       aspect: "aspect-[4/5]" },
   { bg: "bg-yellow/20",                       asset: elementYellow,  alt: "Element yellow",    aspect: "aspect-square" },
   { bg: "bg-ink",                             asset: elementWhite,   alt: "Element white",     aspect: "aspect-[4/5]" },
@@ -44,6 +52,7 @@ const col2: CardDef[] = [
 const col3: CardDef[] = [
   { bg: "bg-primary/10",                      asset: fullLogoOrange, alt: "Full logo orange",  aspect: "aspect-[4/5]" },
   { bg: "bg-ink",                             asset: iconWhite,      alt: "Icon white",        aspect: "aspect-square" },
+  { bg: "",                                   asset: maderaImg,      alt: "Madera",            aspect: "aspect-[4/5]", cover: true },
   { bg: "bg-surface border border-border",    asset: wordmarkOrange, alt: "Wordmark orange",   aspect: "aspect-[4/5]", imgSize: "w-3/5" },
   { bg: "bg-yellow/20",                       asset: iconOrange,     alt: "Icon orange",       aspect: "aspect-square" },
 ];

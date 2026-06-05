@@ -69,6 +69,8 @@
     --yellow-foreground: 30 7% 9%;
     --blue: 202 89% 52%;
     --blue-foreground: 0 0% 100%;
+    --green: 76 60% 45%;
+    --green-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -138,6 +140,8 @@
     --yellow-foreground: 30 7% 9%;
     --blue: 202 89% 52%;
     --blue-foreground: 0 0% 100%;
+    --green: 76 97% 40%;
+    --green-foreground: 30 7% 9%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -206,6 +210,8 @@
 
   .marquee-track {
     animation: marquee 40s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
   }
 
   .reveal {

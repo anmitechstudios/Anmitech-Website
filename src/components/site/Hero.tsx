@@ -37,17 +37,15 @@ export const Hero = () => {
         </Reveal>
 
         {/* Headline */}
-        <Reveal variants={fadeUp}>
+        <Reveal variants={fadeUp} className="flex justify-center">
           <h1
-            className="text-display font-semibold text-ink mx-auto"
-            style={{ fontSize: "clamp(3rem, 9vw, 8.5rem)", lineHeight: 0.93 }}
+            className="text-display font-semibold text-ink whitespace-nowrap"
+            style={{ fontSize: "clamp(2.5rem, 7vw, 8.5rem)", lineHeight: 0.93 }}
           >
-            From idea to 
-            <br />
+            From idea to{" "}
+            {/* <br /> */}
             <span className="relative inline-block">
-              {" "}
-              <span className="relative">
-                launch
+              <span className="relative"> launch
                 <svg
                   viewBox="0 0 300 18"
                   className="absolute left-0 -bottom-1 md:-bottom-3 w-full h-3 md:h-5 text-primary"
@@ -69,8 +67,8 @@ export const Hero = () => {
 
         {/* Subtitle */}
         <Reveal variants={fadeUp}>
-          <p className="mt-8 md:mt-10 text-base md:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto">
-            We partner with startups and growing companies to transform ideas into market-ready products through strategy, design, and engineering.
+          <p className="mt-8 md:mt-10 text-base md:text-xl text-muted-foreground leading-relaxed mx-auto">
+            We partner with startups and growing companies to transform ideas into market-ready products{" "}through strategy, design, and engineering.
 
           </p>
         </Reveal>

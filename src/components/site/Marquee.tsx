@@ -8,7 +8,7 @@ const items = [
 ];
 
 
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 export const Marquee = () => {
   const loop = [...items, ...items];
   return (

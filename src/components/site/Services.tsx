@@ -1,4 +1,5 @@
 import { motion, fadeUp, stagger, Reveal } from "./motion";
+import productImg from "@/images/pruduct.png";
 
 
 const services = [
@@ -8,7 +9,8 @@ const services = [
     features: ["Discovery", "User Research", "Market Validation", "Roadmapping", "Prioritization", "Competitive Analysis", "Go-to-Market"],
     accent: "bg-primary/10",
     dot: "bg-primary",
-    imgBg: "radial-gradient(ellipse at 20% 80%, hsl(19 88% 52% / 0.65) 0%, transparent 55%), radial-gradient(ellipse at 80% 15%, hsl(53 84% 61% / 0.5) 0%, transparent 50%), linear-gradient(135deg, #131110 0%, hsl(19 88% 52% / 0.25) 100%)",
+    imgBg: "",
+    imgSrc: productImg,
   },
   {
     title: "Product Design",
@@ -76,13 +78,13 @@ export const Services = () => {
         <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
 
         <div
-          className="flex gap-5 marquee-track scroll-pause"
-          style={{ width: "max-content", animationDuration: "55s" }}
+          className="flex marquee-track scroll-pause"
+          style={{ width: "max-content", animationDuration: "55s", willChange: "transform" }}
         >
           {loop.map((s, i) => (
             <motion.div
               key={i}
-              className="shrink-0 flex flex-row rounded-2xl border border-border bg-background overflow-hidden cursor-default"
+              className="shrink-0 flex flex-row rounded-2xl border border-border bg-background overflow-hidden cursor-default mr-5"
               initial="rest"
               whileHover="hover"
               animate="rest"
@@ -119,9 +121,13 @@ export const Services = () => {
                 <motion.div
                   variants={{ rest: { opacity: 0, x: 20 }, hover: { opacity: 1, x: 0 } }}
                   transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-                  className="h-full w-[200px]"
-                  style={{ background: s.imgBg }}
-                />
+                  className="h-full w-[200px] overflow-hidden"
+                  style={s.imgSrc ? {} : { background: s.imgBg }}
+                >
+                  {s.imgSrc && (
+                    <img src={s.imgSrc} alt={s.title} className="h-full w-full object-cover" />
+                  )}
+                </motion.div>
               </motion.div>
             </motion.div>
           ))}

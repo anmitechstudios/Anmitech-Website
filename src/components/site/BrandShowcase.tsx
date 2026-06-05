@@ -10,6 +10,20 @@ import elementYellow from "@/images/element yellow.svg";
 import wordmarkWhite from "@/images/wordmark white.svg";
 import wordmarkOrange from "@/images/wordmark orange.svg";
 import maderaImg from "@/images/Madera.jpg";
+import shots0 from "@/images/0shots_so.png";
+import shots230 from "@/images/230shots_so.png";
+import shots400 from "@/images/400shots_so.png";
+import shots53 from "@/images/53shots_so.png";
+import shots601 from "@/images/601shots_so.png";
+import shots954 from "@/images/954shots_so.png";
+import frame130 from "@/images/Frame 130.png";
+import ads247 from "@/images/ADS247 Tablet Package Light.png";
+import vruImg from "@/images/VRUuQqCSdeV.png";
+import b595Img from "@/images/b595862696a.png";
+import priImg from "@/images/pri.png";
+import restImg from "@/images/rest.png";
+import restauImg from "@/images/restau.png";
+import restaurantImg from "@/images/restaurant.png";
 
 /* ── individual mockup card ─────────────────────────────────────── */
 interface CardDef {
@@ -33,28 +47,39 @@ const MockupCard = ({ bg, asset, alt, aspect, imgSize = "w-1/2", cover }: CardDe
 
 /* ── column definitions ─────────────────────────────────────────── */
 const col1: CardDef[] = [
-  { bg: "bg-ink",        asset: fullLogoWhite,  alt: "Full logo white",   aspect: "aspect-[4/5]" },
-  { bg: "bg-primary/10", asset: iconOrange,     alt: "Icon orange",       aspect: "aspect-square" },
-  { bg: "",              asset: maderaImg,      alt: "Madera",            aspect: "aspect-[4/5]",  cover: true },
-  { bg: "bg-yellow/20",  asset: elementOrange,  alt: "Element orange",    aspect: "aspect-[4/5]" },
-  { bg: "bg-blue/10",    asset: iconBlue,       alt: "Icon blue",         aspect: "aspect-square" },
+  { bg: "bg-ink",        asset: fullLogoWhite, alt: "Full logo white",  aspect: "aspect-[4/5]" },
+  { bg: "",              asset: shots0,        alt: "Mockup",           aspect: "aspect-[4/5]", cover: true },
+  { bg: "bg-primary/10", asset: iconOrange,    alt: "Icon orange",      aspect: "aspect-square" },
+  { bg: "",              asset: shots400,      alt: "Mockup",           aspect: "aspect-[4/5]", cover: true },
+  { bg: "bg-yellow/20",  asset: elementOrange, alt: "Element orange",   aspect: "aspect-[4/5]" },
+  { bg: "",              asset: frame130,      alt: "Frame mockup",     aspect: "aspect-[4/5]", cover: true },
+  { bg: "bg-blue/10",    asset: iconBlue,      alt: "Icon blue",        aspect: "aspect-square" },
+  { bg: "",              asset: restImg,       alt: "Restaurant",       aspect: "aspect-[4/5]", cover: true },
+  { bg: "",              asset: maderaImg,     alt: "Madera",           aspect: "aspect-[4/5]", cover: true },
 ];
 
 const col2: CardDef[] = [
-  { bg: "bg-background border border-border", asset: fullLogoOrange, alt: "Full logo orange",  aspect: "aspect-[4/5]" },
-  { bg: "bg-ink",                             asset: wordmarkWhite,  alt: "Wordmark white",    aspect: "aspect-[4/3]", imgSize: "w-3/5" },
-  { bg: "",                                   asset: maderaImg,      alt: "Madera",            aspect: "aspect-[4/5]", cover: true },
-  { bg: "bg-primary/10",                      asset: iconOrange,     alt: "Icon orange",       aspect: "aspect-[4/5]" },
-  { bg: "bg-yellow/20",                       asset: elementYellow,  alt: "Element yellow",    aspect: "aspect-square" },
-  { bg: "bg-ink",                             asset: elementWhite,   alt: "Element white",     aspect: "aspect-[4/5]" },
+  { bg: "",                                   asset: shots230,      alt: "Mockup",           aspect: "aspect-[4/5]", cover: true },
+  { bg: "bg-background border border-border", asset: fullLogoOrange, alt: "Full logo orange", aspect: "aspect-[4/5]" },
+  { bg: "",                                   asset: shots53,       alt: "Mockup",           aspect: "aspect-[4/5]", cover: true },
+  { bg: "bg-ink",                             asset: wordmarkOrange,  alt: "Wordmark white",   aspect: "aspect-[4/3]", imgSize: "w-3/5" },
+  { bg: "",                                   asset: ads247,        alt: "ADS247 tablet",    aspect: "aspect-[4/5]", cover: true },
+  { bg: "bg-yellow/20",                       asset: elementYellow,  alt: "Element yellow",   aspect: "aspect-square" },
+  { bg: "",                                   asset: restauImg,     alt: "Restau",           aspect: "aspect-[4/5]", cover: true },
+  { bg: "bg-ink",                             asset: elementOrange,   alt: "Element white",    aspect: "aspect-[4/5]" },
+  { bg: "",                                   asset: b595Img,       alt: "Mockup",           aspect: "aspect-[4/5]", cover: true },
 ];
 
 const col3: CardDef[] = [
-  { bg: "bg-primary/10",                      asset: fullLogoOrange, alt: "Full logo orange",  aspect: "aspect-[4/5]" },
-  { bg: "bg-ink",                             asset: iconWhite,      alt: "Icon white",        aspect: "aspect-square" },
-  { bg: "",                                   asset: maderaImg,      alt: "Madera",            aspect: "aspect-[4/5]", cover: true },
-  { bg: "bg-surface border border-border",    asset: wordmarkOrange, alt: "Wordmark orange",   aspect: "aspect-[4/5]", imgSize: "w-3/5" },
-  { bg: "bg-yellow/20",                       asset: iconOrange,     alt: "Icon orange",       aspect: "aspect-square" },
+  { bg: "",                                asset: shots601,      alt: "Mockup",           aspect: "aspect-[4/5]", cover: true },
+  { bg: "bg-primary/10",                   asset: fullLogoOrange, alt: "Full logo orange", aspect: "aspect-[4/5]" },
+  { bg: "",                                asset: shots954,      alt: "Mockup",           aspect: "aspect-[4/5]", cover: true },
+  { bg: "bg-ink",                          asset: iconOrange,      alt: "Icon white",       aspect: "aspect-square" },
+  { bg: "",                                asset: vruImg,        alt: "Mockup",           aspect: "aspect-[4/5]", cover: true },
+  { bg: "bg-surface border border-border", asset: wordmarkOrange, alt: "Wordmark orange",  aspect: "aspect-[4/5]", imgSize: "w-3/5" },
+  { bg: "",                                asset: priImg,        alt: "Pri mockup",       aspect: "aspect-[4/5]", cover: true },
+  { bg: "bg-yellow/20",                    asset: iconOrange,     alt: "Icon orange",      aspect: "aspect-square" },
+  { bg: "",                                asset: restaurantImg, alt: "Restaurant",       aspect: "aspect-[4/5]", cover: true },
 ];
 
 /* ── scrolling column ───────────────────────────────────────────── */

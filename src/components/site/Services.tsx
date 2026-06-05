@@ -1,6 +1,4 @@
 import { motion, fadeUp, stagger, Reveal } from "./motion";
-import productImg from "@/images/pruduct.png";
-
 
 const services = [
   {
@@ -9,8 +7,6 @@ const services = [
     features: ["Discovery", "User Research", "Market Validation", "Roadmapping", "Prioritization", "Competitive Analysis", "Go-to-Market"],
     accent: "bg-primary/10",
     dot: "bg-primary",
-    imgBg: "",
-    imgSrc: productImg,
   },
   {
     title: "Product Design",
@@ -18,7 +14,6 @@ const services = [
     features: ["UX Research", "User Flows", "Information Architecture", "Wireframing", "UI Design", "Design Systems", "Prototyping"],
     accent: "bg-yellow/15",
     dot: "bg-yellow",
-    imgBg: "radial-gradient(ellipse at 70% 30%, hsl(53 84% 61% / 0.65) 0%, transparent 55%), radial-gradient(ellipse at 15% 80%, hsl(19 88% 52% / 0.4) 0%, transparent 50%), linear-gradient(135deg, #131110 0%, hsl(53 84% 61% / 0.2) 100%)",
   },
   {
     title: "MVP Development",
@@ -26,7 +21,6 @@ const services = [
     features: ["MVP Planning", "Frontend Dev", "Backend Dev", "Responsive", "Tech Scoping", "Launch Support", "API Design"],
     accent: "bg-blue/10",
     dot: "bg-blue",
-    imgBg: "radial-gradient(ellipse at 80% 50%, hsl(202 89% 52% / 0.65) 0%, transparent 55%), radial-gradient(ellipse at 10% 20%, hsl(202 89% 52% / 0.35) 0%, transparent 45%), linear-gradient(135deg, #131110 0%, hsl(202 89% 52% / 0.2) 100%)",
   },
   {
     title: "Enterprise Software",
@@ -34,7 +28,6 @@ const services = [
     features: ["Internal Tools", "Dashboards", "Ops Systems", "Automation", "Role Management", "Data Viz", "Integrations"],
     accent: "bg-primary/10",
     dot: "bg-primary",
-    imgBg: "radial-gradient(ellipse at 50% 0%, hsl(19 88% 52% / 0.7) 0%, transparent 55%), radial-gradient(ellipse at 90% 90%, hsl(53 84% 61% / 0.45) 0%, transparent 45%), linear-gradient(180deg, #131110 0%, hsl(19 88% 52% / 0.2) 100%)",
   },
   {
     title: "AI Product Development",
@@ -42,7 +35,6 @@ const services = [
     features: ["AI Strategy", "AI Workflows", "Chat Interfaces", "Productivity", "Automation", "LLM Integration", "AI Prototyping"],
     accent: "bg-yellow/15",
     dot: "bg-yellow",
-    imgBg: "radial-gradient(ellipse at 30% 40%, hsl(53 84% 61% / 0.6) 0%, transparent 55%), radial-gradient(ellipse at 85% 80%, hsl(19 88% 52% / 0.35) 0%, transparent 45%), linear-gradient(135deg, #131110 0%, hsl(53 84% 61% / 0.2) 100%)",
   },
 ];
 
@@ -82,54 +74,29 @@ export const Services = () => {
           style={{ width: "max-content", animationDuration: "55s", willChange: "transform" }}
         >
           {loop.map((s, i) => (
-            <motion.div
+            <div
               key={i}
-              className="shrink-0 flex flex-row rounded-2xl border border-border bg-background overflow-hidden cursor-default mr-5"
-              initial="rest"
-              whileHover="hover"
-              animate="rest"
+              className="shrink-0 w-[320px] rounded-2xl border border-border bg-background overflow-hidden cursor-default mr-5 p-8 flex flex-col"
             >
-              {/* Card content — fixed width */}
-              <div className="w-[320px] shrink-0 p-8 flex flex-col">
-                <div className={`h-10 w-10 rounded-xl ${s.accent} mb-7`} />
-                <h3 className="text-display text-2xl font-semibold text-ink mb-3">
-                  {s.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-8">
-                  {s.desc}
-                </p>
-                <div className="mt-auto flex flex-wrap gap-2">
-                  {s.features.map((f) => (
-                    <span
-                      key={f}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted text-[11.5px] text-muted-foreground font-medium"
-                    >
-                      <span className={`h-1.5 w-1.5 rounded-full ${s.dot} opacity-70`} />
-                      {f}
-                    </span>
-                  ))}
-                </div>
+              <div className={`h-10 w-10 rounded-xl ${s.accent} mb-7`} />
+              <h3 className="text-display text-2xl font-semibold text-ink mb-3">
+                {s.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-8">
+                {s.desc}
+              </p>
+              <div className="mt-auto flex flex-wrap gap-2">
+                {s.features.map((f) => (
+                  <span
+                    key={f}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted text-[11.5px] text-muted-foreground font-medium"
+                  >
+                    <span className={`h-1.5 w-1.5 rounded-full ${s.dot} opacity-70`} />
+                    {f}
+                  </span>
+                ))}
               </div>
-
-              {/* Image — slides in from the right */}
-              <motion.div
-                variants={{ rest: { width: 0 }, hover: { width: 200 } }}
-                transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-                className="shrink-0 overflow-hidden"
-                style={{ minWidth: 0 }}
-              >
-                <motion.div
-                  variants={{ rest: { opacity: 0, x: 20 }, hover: { opacity: 1, x: 0 } }}
-                  transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-                  className="h-full w-[200px] overflow-hidden"
-                  style={s.imgSrc ? {} : { background: s.imgBg }}
-                >
-                  {s.imgSrc && (
-                    <img src={s.imgSrc} alt={s.title} className="h-full w-full object-cover" />
-                  )}
-                </motion.div>
-              </motion.div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

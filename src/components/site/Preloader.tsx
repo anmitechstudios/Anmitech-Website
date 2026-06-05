@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const COMPANY = "Anmitech Studios";
-const SUBTEXT = "Shaping your digital future";
+const SUBTEXT = "we build digital products that people love to use.";
 
 const letterVariants = {
   hidden: { opacity: 0, y: 28 },

@@ -120,8 +120,8 @@ export const BrandShowcase = () => {
             </h2>
           </motion.div>
           <motion.p variants={fadeUp} className="md:max-w-sm text-base text-muted-foreground leading-relaxed">
-            A peek at how the Anmitech identity lives across surfaces — from
-            stationery to product UI.
+            Logos, wordmarks, and brand assets — alongside the digital products
+            and interfaces they were built to live in.
           </motion.p>
         </Reveal>
       </div>

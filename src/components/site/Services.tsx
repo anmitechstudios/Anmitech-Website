@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import { motion, fadeUp, stagger, Reveal } from "./motion";
 
 const services = [
@@ -40,7 +41,58 @@ const services = [
 
 const loop = [...services, ...services];
 
+const SPEED = 0.6;
+
 export const Services = () => {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const posRef = useRef(0);
+  const rafRef = useRef<number>(0);
+  const isDragging = useRef(false);
+  const isHovered = useRef(false);
+  const dragStartX = useRef(0);
+  const dragStartPos = useRef(0);
+
+  useEffect(() => {
+    const tick = () => {
+      if (!isDragging.current && !isHovered.current) {
+        const half = (trackRef.current?.scrollWidth ?? 0) / 2;
+        if (half > 0) {
+          posRef.current -= SPEED;
+          if (posRef.current <= -half) posRef.current += half;
+        }
+      }
+      if (trackRef.current) {
+        trackRef.current.style.transform = `translateX(${posRef.current}px)`;
+      }
+      rafRef.current = requestAnimationFrame(tick);
+    };
+    rafRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, []);
+
+  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    isDragging.current = true;
+    dragStartX.current = e.clientX;
+    dragStartPos.current = posRef.current;
+    e.currentTarget.setPointerCapture(e.pointerId);
+  };
+
+  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!isDragging.current) return;
+    const dx = e.clientX - dragStartX.current;
+    const half = (trackRef.current?.scrollWidth ?? 0) / 2;
+    let p = dragStartPos.current + dx;
+    if (half > 0) {
+      while (p < -half) p += half;
+      while (p > 0) p -= half;
+    }
+    posRef.current = p;
+  };
+
+  const onPointerUp = () => {
+    isDragging.current = false;
+  };
+
   return (
     <section id="services" className="py-[120px]">
 
@@ -57,26 +109,35 @@ export const Services = () => {
           </motion.div>
           <motion.div variants={fadeUp} className="md:col-span-6 md:col-start-7 flex items-end">
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              We work with founders, startups, and businesses to define, design, build, and launch digital products that create value for users and drive business growth. 
+              We work with founders, startups, and businesses to define, design, build, and launch digital products that create value for users and drive business growth.
             </p>
           </motion.div>
         </Reveal>
       </div>
 
       {/* Scrolling cards — full bleed */}
-      <div className="relative overflow-hidden">
+      <div
+        className="relative overflow-hidden"
+        onMouseEnter={() => { isHovered.current = true; }}
+        onMouseLeave={() => { isHovered.current = false; }}
+      >
         {/* Edge fade masks */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
 
         <div
-          className="flex marquee-track scroll-pause"
-          style={{ width: "max-content", animationDuration: "55s", willChange: "transform" }}
+          ref={trackRef}
+          className="flex cursor-grab active:cursor-grabbing"
+          style={{ width: "max-content", willChange: "transform", userSelect: "none", touchAction: "none" }}
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp}
+          onPointerCancel={onPointerUp}
         >
           {loop.map((s, i) => (
             <div
               key={i}
-              className="shrink-0 w-[320px] rounded-2xl border border-border bg-background overflow-hidden cursor-default mr-5 p-8 flex flex-col"
+              className="shrink-0 w-[320px] rounded-2xl border border-border bg-background overflow-hidden mr-5 p-8 flex flex-col"
             >
               <div className={`h-10 w-10 rounded-xl ${s.accent} mb-7`} />
               <h3 className="text-display text-2xl font-semibold text-ink mb-3">

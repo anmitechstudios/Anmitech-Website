@@ -14,10 +14,10 @@ const NAV = [
 ];
 
 const SOCIALS = [
-  { label: "X",         href: "https://x.com",            Icon: FaXTwitter    },
-  { label: "Instagram", href: "https://instagram.com",     Icon: FaInstagram   },
-  { label: "Dribbble",  href: "https://dribbble.com",      Icon: FaDribbble    },
-  { label: "LinkedIn",  href: "https://linkedin.com",      Icon: FaLinkedinIn  },
+  { label: "X",         href: "https://x.com/anmitechhq?s=11",            Icon: FaXTwitter    },
+  { label: "Instagram", href: "https://www.instagram.com/anmitechhq?igsh=MXRuZHludXA5bDJueA%3D%3D&utm_source=qr",     Icon: FaInstagram   },
+  // { label: "Dribbble",  href: "https://dribbble.com",      Icon: FaDribbble    },
+  { label: "LinkedIn",  href: "https://www.linkedin.com/company/anmitech-studios/",      Icon: FaLinkedinIn  },
 ];
 
 function useLiveTime() {

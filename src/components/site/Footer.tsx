@@ -98,6 +98,22 @@ export const Footer = () => {
                   strokeWidth={1.5}
                 />
               </motion.a>
+              <motion.a
+                href="tel:+2349030308662"
+                whileHover={{ x: 4, transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] } }}
+                className="group inline-flex items-end gap-3 text-white/50 hover:text-white transition-colors duration-300 mt-3"
+              >
+                <span
+                  className="font-headline font-semibold leading-none"
+                  style={{ fontSize: "clamp(1.1rem, 2.5vw, 2rem)", letterSpacing: "-0.03em" }}
+                >
+                  +234 903 030 8662
+                </span>
+                <ArrowUpRight
+                  className="h-5 w-5 md:h-6 md:w-6 shrink-0 mb-0.5 text-primary/60 transition-transform duration-400 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  strokeWidth={1.5}
+                />
+              </motion.a>
               <div className="mt-5 h-px w-full bg-white/10" />
             </div>
 

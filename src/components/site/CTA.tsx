@@ -56,8 +56,17 @@ export const CTA = () => {
                 info@anmitechstudios.com
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </motion.a>
+              <motion.a
+                href="tel:+2349030308662"
+                whileHover={{ y: -2, scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
+                className="group inline-flex items-center gap-2 px-6 py-4 rounded-full border border-ink-foreground/20 text-ink-foreground text-sm font-medium hover:border-ink-foreground/40 hover:text-white transition-colors duration-500"
+              >
+                +234 903 030 8662
+                <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </motion.a>
               <a
-                href="#contact"
+                href="tel:+2349030308662"
                 className="text-sm text-ink-foreground/50 hover:text-ink-foreground transition-colors duration-300 link-underline"
               >
                 or book a call

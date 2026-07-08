@@ -28,7 +28,7 @@ const projects = [
     chipText: "text-green-foreground",
     span: "md:col-span-5",
     image: nkwadoImg,
-    link: "",
+    link: "https://nkwado.com/",
   },
   {
     name: "Nkwado",
@@ -40,7 +40,7 @@ const projects = [
     chipText: "text-green-foreground",
     span: "md:col-span-5",
     image: nkwadoImg2,
-    link: "",
+    link: "https://nkwado.com/",
   },
   {
     name: "Kotrell",
